@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web audio API</title>
+        <style>
+            div, canvas, button {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            #keyboard > button {
+                margin-left: 5px;
+                display: inline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" name="volume" min="0" max="2" value="1" step="0.01">
+        </div>
+        <div>
+            <label for="panner">Panner</label>
+            <input type="range" id="panner" name="panner" min="-1" max="1" value="0" step="0.01">
+        </div>
+        <div>
+            <label for="echoSwitch">Enable echo</label>
+            <input type="checkbox" name="echoSwitch" id="echoSwitch" checked>
+        </div>
+        <canvas id="waveform"></canvas>
+        <canvas id="frequency"></canvas>
+        <button type="button" id="pause">▶️</button>
+        <div id="keyboard"></div>
+        <script src="./main.js" type="module"></script>
+        <!-- <script src="./oscillator.js" type="module"></script> -->
+        <!-- <script src="./simple-synth.js" type="module"></script> -->
+    </body>
+
+</html>
